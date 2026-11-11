@@ -15,7 +15,7 @@ B.Tech. Computer Science and Engineering — Artificial Intelligence & Machine L
 |:--|:--|
 | **B S Rithik Harihar** | Dr. C. Gunasundari |
 | RA2411026050052 | Assistant Professor, Department of AIML |
-| III Year · V Semester | · Section: *AIML A* |
+| III Year · V Semester | Section: *AIML A* |
 
 </div>
 
