@@ -1,0 +1,39 @@
+flowchart LR
+    init(["start"]) --> s0
+    s0(("S0"))
+    s1(("L1"))
+    s2(("L2"))
+    s3(("P0"))
+    s4(("P1"))
+    s5(("Q0"))
+    s6(("P2"))
+    s7(("Ql1"))
+    s8(("Qh"))
+    s9((("Ql2")))
+    s10(("Qd"))
+    s0 -->|"letter, digit"| s1
+    s1 -->|"letter, digit"| s1
+    s1 -->|"dot, underscore, hyphen"| s2
+    s1 -->|"at"| s3
+    s2 -->|"letter, digit"| s1
+    s3 -->|"letter, digit"| s4
+    s4 -->|"letter, digit"| s4
+    s4 -->|"dot"| s5
+    s4 -->|"hyphen"| s6
+    s5 -->|"letter"| s7
+    s5 -->|"digit"| s8
+    s6 -->|"letter, digit"| s4
+    s6 -->|"hyphen"| s6
+    s7 -->|"letter"| s9
+    s7 -->|"digit"| s8
+    s7 -->|"dot"| s5
+    s7 -->|"hyphen"| s10
+    s8 -->|"letter, digit"| s8
+    s8 -->|"dot"| s5
+    s8 -->|"hyphen"| s10
+    s9 -->|"letter"| s9
+    s9 -->|"digit"| s8
+    s9 -->|"dot"| s5
+    s9 -->|"hyphen"| s10
+    s10 -->|"letter, digit"| s8
+    s10 -->|"hyphen"| s10
