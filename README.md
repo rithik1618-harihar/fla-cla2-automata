@@ -54,7 +54,6 @@ Finite automata are useful when an input rule can be checked by tracking a limit
 
 The states \(q_0\) through \(q_6\) represent how many digits have been read. A non-digit or an extra digit after the sixth position leads to a rejecting trap state.
 
-**DFA diagram:** [View PIN DFA](documentation/diagrams/pin_dfa.png)
 
 | Accepted examples | Rejected examples |
 |---|---|
@@ -72,7 +71,6 @@ A correctly formatted PIN is not necessarily the correct PIN for a particular ac
 
 The machine accepts only when the minimum length has been reached and every required character class has appeared.
 
-**DFA diagram:** [View password DFA](documentation/diagrams/password_dfa.svg)
 
 | Accepted examples | Rejected examples |
 |---|---|
@@ -95,8 +93,6 @@ tld    = letter{2,}
 - The domain contains dot-separated labels.
 - The final top-level domain contains at least two letters.
 - Leading, trailing or repeated local-part separators are rejected.
-
-**DFA diagram:** [View e-mail DFA](documentation/diagrams/email_dfa.png)
 
 | Accepted examples | Rejected examples |
 |---|---|
@@ -143,7 +139,6 @@ S → (S)S | [S]S | ε
 
 The PDA pushes each opening bracket onto the stack. A closing bracket pops only the matching opener. A mismatch or an attempt to pop an empty stack causes rejection. The input is accepted when all brackets have been matched.
 
-**Diagram:** [Balanced-bracket PDA](documentation/diagrams/balanced_dpda.mmd)
 
 | Accepted examples | Rejected examples |
 |---|---|
@@ -166,8 +161,6 @@ P ⇒ aPa ⇒ abPba ⇒ abba
 The NPDA pushes the first half of the input onto the stack, guesses the middle, and then compares the remaining symbols with the stack contents. Since an unmarked input does not identify its own midpoint, the machine is nondeterministic.
 
 A marked palindrome of the form `w c wᴿ` has an explicit centre marker. That marker identifies when the machine should switch from pushing to popping, allowing a deterministic construction.
-
-**Diagram:** [Palindrome NPDA](documentation/diagrams/palindrome_npda.mmd) · [Marked palindrome DPDA](documentation/diagrams/marked_palindrome_dpda.mmd)
 
 | Accepted examples | Rejected examples |
 |---|---|
@@ -221,8 +214,6 @@ S → aSb | ε
 ```
 
 The DPDA pushes one marker for every `a`. When the `b` phase begins, it pops one marker for every `b`. It rejects if the order is broken, if too many `b` symbols are read, or if unmatched markers remain at the end.
-
-**Diagram:** [DPDA for aⁿbⁿ](documentation/diagrams/anbn_dpda.mmd)
 
 | Accepted examples | Rejected examples |
 |---|---|
@@ -290,5 +281,5 @@ The test suite exercises the Task 2 validators with accepted and rejected inputs
 - **Course:** 21CSC301T – Formal Language and Automata
 - **Assessment:** CLA-2 – Tasks 2 and 3
 - **Faculty:** Dr. C. Gunasundari
-- **Section:** Add your section before submission
+- **Section:** CSE AIML- A
 
